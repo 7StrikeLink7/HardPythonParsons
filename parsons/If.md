@@ -1,10 +1,15 @@
 ---
 layout: default
-title: Selection – If statements - Favourite Movie
-
+title: Selection – If statements - New Password 
 ---
 
 
+![image](https://user-images.githubusercontent.com/68385109/226180749-f01b4b38-8889-4bb5-95c7-26b6abcd5ed6.png)
+![image](https://user-images.githubusercontent.com/68385109/226180861-817e2057-64fe-407d-9201-b866f127e66d.png)
+![image](https://user-images.githubusercontent.com/68385109/226180893-cf825cc3-c0e1-48d3-80ee-625e8e79b6c7.png)
+![image](https://user-images.githubusercontent.com/68385109/226180916-8c274c49-4b7d-4add-add9-209c1e67cec7.png)
+
+<h2> Beware, 2 lines do not belong. You do not need to use all the lines.</h2>
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -14,16 +19,16 @@ title: Selection – If statements - Favourite Movie
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "favouriteMovie = input(&quot;What is your favourite movie? &quot;)\n" +
-    "if (favouriteMovie == &quot;Megamind&quot;):\n" +
-    "  print(&quot;That is my favourite movie too!&quot;)\n" +
-    "if (favouriteMovie == &quot;Twilight&quot;):\n" +
-    "  print(&quot;An interesting choice.&quot;)\n" +
-    "  \n" +
-    "print(&quot;Thanks for answering! Time for me to watch movie.&quot;)";
+  var initial = "newPassword = input(&quot;Enter your new password: &quot;)\n" +
+    "if (len(newPassword) &lt; 7):\n" +
+    "  print(&quot;That is too short! &quot;)\n" +
+    "if (len(newPassword) &gt; 15):\n" +
+    "    print(&quot;That is too long! &quot;)\n" +
+    "iF (newPassword &lt; 7): #distractor\n" +
+    "if {len[newPassword} &gt; 15]: #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
-    "max_wrong_lines": 0,
+    "max_wrong_lines": 2,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
@@ -44,7 +49,6 @@ title: Selection – If statements - Favourite Movie
   }); 
 })(); 
 </script>
- 
  
 ## Topics:
 [Outputs](./Outputs.html)
