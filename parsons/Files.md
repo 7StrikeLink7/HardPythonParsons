@@ -106,48 +106,16 @@ title: File Handling
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "&lt;div id=&quot;3-sortableTrash&quot; class=&quot;sortable-code&quot;&gt;&lt;/div&gt; \n" +
-    "&lt;div id=&quot;3-sortable&quot; class=&quot;sortable-code&quot;&gt;&lt;/div&gt; \n" +
-    "&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt; \n" +
-    "&lt;p&gt; \n" +
-    "    &lt;input id=&quot;3-feedbackLink&quot; value=&quot;Get Feedback&quot; type=&quot;button&quot; /&gt; \n" +
-    "    &lt;input id=&quot;3-newInstanceLink&quot; value=&quot;Reset Problem&quot; type=&quot;button&quot; /&gt; \n" +
-    "&lt;/p&gt; \n" +
-    "&lt;script type=&quot;text/javascript&quot;&gt; \n" +
-    "(function(){\n" +
-    "  var initial = &quot;guardian = input(&quot;Enter a scary monster: &quot;)\n&quot; +\n" +
-    "    &quot;file = open(&#039;newTextFile.txt&#039;,&#039;a&#039;)\n&quot; +\n" +
-    "    &quot;file.write(&quot;Who lived in a castle which was guarded by a terrifying &quot;+ guardian+&quot;.....\n\n&quot;)\n&quot; +\n" +
-    "    &quot;file.write(&quot;Some time has passed after the intro.... \n\n ...after the rescue. The handsome programmer was kissed by the Princess. They were to be married, but the handsome programmer has anoter love... their computer. \n&quot;)\n&quot; +\n" +
-    "    &quot;file.write(&quot;We put an close to this file for now. Maybe the programmer can open the file up again in another chapter.&quot;)\n&quot; +\n" +
-    "    &quot;file.close() # file close for appending\n&quot; +\n" +
-    "    &quot;file = open(&quot;newTextFile.txt&quot;, &quot;r&quot;)\n&quot; +\n" +
-    "    &quot;print (file.read())\n&quot; +\n" +
-    "    &quot;file.close()# file close for reading\n&quot; +\n" +
-    "    &quot;magicSpells = (&quot;Fireball&quot;, &quot;Thunderbolt&quot;, &quot;Water Ball&quot;) #distractor&quot;;\n" +
-    "  var parsonsPuzzle = new ParsonsWidget({\n" +
-    "    &quot;sortableId&quot;: &quot;3-sortable&quot;,\n" +
-    "    &quot;max_wrong_lines&quot;: 0,\n" +
-    "    &quot;grader&quot;: ParsonsWidget._graders.LineBasedGrader,\n" +
-    "    &quot;exec_limit&quot;: 2500,\n" +
-    "    &quot;can_indent&quot;: true,\n" +
-    "    &quot;x_indent&quot;: 50,\n" +
-    "    &quot;lang&quot;: &quot;en&quot;,\n" +
-    "    &quot;show_feedback&quot;: true\n" +
-    "  });\n" +
-    "  parsonsPuzzle.init(initial);\n" +
-    "  parsonsPuzzle.shuffleLines();\n" +
-    "  $(&quot;#3-newInstanceLink&quot;).click(function(event){ \n" +
-    "      event.preventDefault(); \n" +
-    "      parsonsPuzzle.shuffleLines(); \n" +
-    "  }); \n" +
-    "  $(&quot;#3-feedbackLink&quot;).click(function(event){ \n" +
-    "      event.preventDefault(); \n" +
-    "      parsonsPuzzle.getFeedback(); \n" +
-    "  }); \n" +
-    "})(); \n" +
-    "&lt;/script&gt;\n" +
-    " ";
+  var initial = "guardian = input(&quot;Enter a scary monster: &quot;)\n" +
+    "file = open(&#039;newTextFile.txt&#039;,&#039;a&#039;)\n" +
+    "file.write(&quot;Who lived in a castle which was guarded by a terrifying &quot;+ guardian+&quot;.....\n\n&quot;)\n" +
+    "file.write(&quot;Some time has passed after the intro.... \n\n ...after the rescue. The handsome programmer was kissed by the Princess. They were to be married, but the handsome programmer has anoter love... their computer. \n&quot;)\n" +
+    "file.write(&quot;We put an close to this file for now. Maybe the programmer can open the file up again in another chapter.&quot;)\n" +
+    "file.close() # file close for appending\n" +
+    "file = open(&quot;newTextFile.txt&quot;, &quot;r&quot;)\n" +
+    "print (file.read())\n" +
+    "file.close()# file close for reading\n" +
+    "magicSpells = (&quot;Fireball&quot;, &quot;Thunderbolt&quot;, &quot;Water Ball&quot;) #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "3-sortable",
     "max_wrong_lines": 0,
