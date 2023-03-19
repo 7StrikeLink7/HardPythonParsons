@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Random Numbers
+title: Random Number generation
 ---
 
-![image](https://user-images.githubusercontent.com/68385109/214690835-6015beab-9903-491f-81ec-4b4f058b7657.png)
+![image](https://user-images.githubusercontent.com/68385109/226184233-6d5af9f4-a146-4ee5-95d8-7829c9d3a7f5.png)
 
- <div id="0-sortableTrash" class="sortable-code"></div> 
+![image](https://user-images.githubusercontent.com/68385109/226184221-9edd2c9c-c618-4a84-9f71-cc698d412a96.png)
+
+<div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
@@ -15,9 +17,10 @@ title: Random Numbers
 <script type="text/javascript"> 
 (function(){
   var initial = "import random\n" +
-    "randomNumber = random.randint(1,6)\n" +
-    "print(&quot;Rolling a 6 sided dice:&quot;)\n" +
-    "print(randomNumber)";
+    "startNumber = 1\n" +
+    "endNumber = 100\n" +
+    "randomNumber = random.randint(startNumber, endNumber)\n" +
+    "print(&quot;My random number is&quot;, randomNumber)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
