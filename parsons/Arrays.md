@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Arrays - Class Register
+title: Arrays- Spell List
 ---
 
-![image](https://user-images.githubusercontent.com/68385109/216831056-553c3f26-7bdd-49db-b8c2-9af70aa4f964.png)
-
-![image](https://user-images.githubusercontent.com/68385109/216831048-178c5024-611b-42c5-80d1-47c99c2679dd.png)
+![image](https://user-images.githubusercontent.com/68385109/226173968-03fab6fd-f9e1-47c4-9612-22a30a121424.png)
+![image](https://user-images.githubusercontent.com/68385109/226173957-01dcb461-4cad-4c4d-ad00-94a1d9d359f8.png)
+<h1>Beware, a line does not belong. So you don't need to use all the blocks </h1>
 
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
@@ -16,12 +16,14 @@ title: Arrays - Class Register
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "students = [ &quot;John&quot;, &quot;Bill&quot;, &quot;Pete&quot;, &quot;Dave&quot; ]\n" +
-    "students.append(&quot;Mark&quot;)\n" +
-    "print(students)";
+  var initial = "magicSpells = [&quot;Fireball&quot;, &quot;Thunderbolt&quot;, &quot;Water Ball&quot;]\n" +
+    "magicSpells.append(&quot;Gust&quot;)\n" +
+    "magicSpells.sort()\n" +
+    "print(magicSpells)\n" +
+    "magicSpells = (&quot;Fireball&quot;, &quot;Thunderbolt&quot;, &quot;Water Ball&quot;) #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
-    "max_wrong_lines": 10,
+    "max_wrong_lines": 1,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
@@ -42,6 +44,8 @@ title: Arrays - Class Register
   }); 
 })(); 
 </script>
+
+
 ## Topics:
 [Outputs](./Outputs.html)
 [Variables and Outputs](./Variables.html)
