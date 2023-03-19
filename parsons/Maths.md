@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Maths
+title: Maths - Numbers amd Operators
 ---
-
-![image](https://user-images.githubusercontent.com/68385109/213945998-6c6339aa-11ae-46f6-85e2-a4da0dca6e26.png)
-
- <div id="0-sortableTrash" class="sortable-code"></div> 
+![image](https://user-images.githubusercontent.com/68385109/226184338-376656d8-f709-444b-9f34-969314f0b5f0.png)
+![image](https://user-images.githubusercontent.com/68385109/226184431-054beefc-0aac-4d22-8315-c3c403335299.png)
+<div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
@@ -14,12 +13,12 @@ title: Maths
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "num1 = int(input(&quot;Enter a number: &quot;))\n" +
-    "num2 = int(input(&quot;Enter a second number: &quot;))\n" +
-    "num3 = int(input(&quot;Enter a third number: &quot;))\n" +
-    "num4 = int(input(&quot;Enter a fourth number: &quot;))\n" +
-    "print(&quot;Your first number + 2nd number * 3rd number / fourth number =&quot;)\n" +
-    "print((num1 + num2) * num3 / num4)";
+  var initial = "print(&quot;The remainder of 100 / 6 is: &quot;)\n" +
+    "print(100 % 6)\n" +
+    "print(&quot;The integer division of 56 / 5 is &quot;)\n" +
+    "print(56 // 5)\n" +
+    "print(&quot;2 cubed is&quot;)\n" +
+    "print(2 ** 3)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
