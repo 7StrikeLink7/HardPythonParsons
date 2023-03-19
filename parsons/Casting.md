@@ -5,7 +5,6 @@ title: Casting - Float and Strings
 
 ![image](https://user-images.githubusercontent.com/68385109/226183882-de8d18d9-e6a0-4722-8c5f-17fc2a6f5ea2.png)
 ![image](https://user-images.githubusercontent.com/68385109/226183995-33c03a74-47cb-40b9-8cd0-b90fb88babbb.png)
-
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -23,14 +22,13 @@ title: Casting - Float and Strings
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
-    "grader": ParsonsWidget._graders.VariableCheckGrader,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "0-sortableTrash",
-    "vartests": []
+    "trashId": "0-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -44,7 +42,6 @@ title: Casting - Float and Strings
   }); 
 })(); 
 </script>
-
 ## Topics:
 [Outputs](./Outputs.html)
 [Variables and Outputs](./Variables.html)
