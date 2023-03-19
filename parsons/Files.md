@@ -4,8 +4,10 @@ title: File Handling
 ---
 
 <p1>File Creation</p1>
-![image](https://user-images.githubusercontent.com/68385109/226173011-67168e26-44b5-45cc-a5ce-9db6e1c58384.png)
-![image](https://user-images.githubusercontent.com/68385109/226174212-aa065120-f9af-4920-be34-ad34b43744f4.png)
+
+![image](https://user-images.githubusercontent.com/68385109/226177502-d41819d4-b504-4180-808c-dde6dceeafe6.png)
+
+
 
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
