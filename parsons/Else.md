@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Selection – IF Else statements - Storytelling
+title: Selection – IF Else statements - Test Score
 
 ---
-![image](https://user-images.githubusercontent.com/68385109/214693474-63e8a41b-f592-4abe-add2-d1199817c42a.png)
 
- <div id="0-sortableTrash" class="sortable-code"></div> 
+![image](https://user-images.githubusercontent.com/68385109/226179172-6a12eaf0-bebf-44f3-a481-286f0932626e.png)
+![image](https://user-images.githubusercontent.com/68385109/226179328-a28fc6b1-74d2-48e6-89c5-210cfe3f893c.png)
+
+<div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
@@ -14,12 +16,20 @@ title: Selection – IF Else statements - Storytelling
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "print(&quot;Your grandmother is sitting by the fireplace. You decide to walk up to her.&quot;)\n" +
-    "answer = input(&quot;Would you like some cookies? yes/no &quot;)\n" +
-    "if (answer.lower() == &quot;yes&quot; or answer.lower() == &quot;y&quot;):\n" +
-    "    print(&quot;That is good. I made some cookies for you.&quot;) \n" +
-    "else:\n" +
-    "  print(&quot;How could you not want cookies? MY COOKIES ARE THE BEST!&quot;)";
+  var initial = "testScore = int(input(&quot;You just had a test. What did you score out of a hundred? &quot;))\n" +
+    "if (testScore == 0):\n" +
+    "  print(&quot;I am sure there is a good reason for this.&quot;)\n" +
+    "elif (testScore &lt; 0 or testScore &gt; 100):\n" +
+    "  print(&quot;That\&#039;s not right...&quot;)\n" +
+    "elif (testScore &lt; 50):\n" +
+    "  print(&quot;Well done. It was a hard test.&quot;)\n" +
+    "    \n" +
+    "elif (testScore &gt;= 50):\n" +
+    "  print(&quot;Congrats! You have done very well!&quot;)\n" +
+    "else: \n" +
+    "  print(&quot;Sorry. I wanted a number.&quot;)\n" +
+    "  \n" +
+    "IF play = &quot;y&quot;: #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
@@ -28,8 +38,7 @@ title: Selection – IF Else statements - Storytelling
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "show_feedback": true,
-    "trashId": "0-sortableTrash"
+    "show_feedback": true
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
