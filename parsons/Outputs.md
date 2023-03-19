@@ -2,8 +2,9 @@
 layout: default
 title: Outputs
 ---
-![image](https://user-images.githubusercontent.com/68385109/213943936-ea88d7cd-6b0d-4013-89e5-85c071c5a4ff.png)
-
+<h1> Cup of Tea </h1>
+![image](https://user-images.githubusercontent.com/68385109/226185060-b6ef37b3-cc57-42a6-95b5-b215153d4438.png)
+![image](https://user-images.githubusercontent.com/68385109/226185187-36611b34-b432-47e4-a4ee-6f1b599c3d9c.png)
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -13,10 +14,12 @@ title: Outputs
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "print(&quot;First, read all the lines.&quot;)\n" +
-    "print(&quot;Second, Cut and Copy lines into the right order.&quot;)\n" +
-    "print(&quot;Third, take a screenshot.&quot;)\n" +
-    "print(&quot;Lastly, give yourself a pat on the back.&quot;)";
+  var initial = "print(&quot;First, boil the water.&quot;)\n" +
+    "print(&quot;Secondly, grab your favourite cup, a teabag, and some sugar.&quot;)\n" +
+    "print(&quot;Put the teabag in the cup, and two teaspoons of sugar.&quot;)\n" +
+    "print(&quot;After the water has boiled, pour the water into the cup until it is almost full. Leaving space for milk.&quot;)\n" +
+    "print(&quot;Squeeze and take out the teabag, and pour in milk, and stir.&quot;)\n" +
+    "print(&quot;Lastly, enjoy your cup of tea.&quot;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
@@ -35,6 +38,51 @@ title: Outputs
       parsonsPuzzle.shuffleLines(); 
   }); 
   $("#0-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+<h1> Story Time </h1>
+![image](https://user-images.githubusercontent.com/68385109/226184677-2732b2c5-bebd-441f-86af-42a084e9d604.png)
+![image](https://user-images.githubusercontent.com/68385109/226184805-fbe6951d-e87c-432f-9842-f35b3a39d126.png)
+
+<div id="1-sortableTrash" class="sortable-code"></div> 
+<div id="1-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="1-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="1-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "dogName = &quot;Fluffy&quot;\n" +
+    "mastersName = &quot;Flan&quot;\n" +
+    "print(&quot;There once was a dog called &quot; + dogName + &quot;, who was very loyal to his master called &quot; + mastersName + &quot;.&quot;)\n" +
+    "print(mastersName + &quot; goes to work everyday via train.&quot;)\n" +
+    "print(dogName + &quot; waited days, weeks, months, and years outside the train station. But his master never came home...&quot;)\n" +
+    "print(dogName + &quot; waits outside the trainstation for him everyday.&quot;)\n" +
+    "print(&quot;But one day, his Master, &quot; + mastersName +  &quot;, did not come home on time.&quot;)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "1-sortable",
+    "max_wrong_lines": 0,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "1-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#1-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#1-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
