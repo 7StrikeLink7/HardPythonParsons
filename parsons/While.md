@@ -3,9 +3,8 @@ layout: default
 title: While Loops
 ---
 
-![image](https://user-images.githubusercontent.com/68385109/216828984-ef07ed4c-5f72-4b19-a56e-639ba8542aa2.png)
-![image](https://user-images.githubusercontent.com/68385109/216829027-63c2424e-cf21-4ea4-a60b-4a6dc539d707.png)
-
+![image](https://user-images.githubusercontent.com/68385109/226177688-509a3912-0c39-49df-937c-18436e9525a0.png)
+![image](https://user-images.githubusercontent.com/68385109/226177679-abd78bcb-0f93-4be3-a8dd-a7d057b60624.png)
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -15,24 +14,23 @@ title: While Loops
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "#The order of the code has been mixed up. Rearrange it so that it makes sense.\n" +
-    "annoyed = input(&quot;Are you annoyed? y/n &quot;)\n" +
-    "counter = 1\n" +
-    "while (annoyed != &quot;y&quot;):\n" +
-    "  counter = counter + 1  \n" +
-    "  annoyed = input(&quot;Are you annoyed yet? y/n &quot;)\n" +
-    "print(&quot;Finaly! I said it&quot;, counter, &quot;times!&quot;)\n" +
-    "  ";
+  var initial = "counter = 0\n" +
+    "target = 10\n" +
+    "while (counter &lt; target):\n" +
+    "  squats = int(input(&quot;How many squats did you do today? &quot;))\n" +
+    "  counter = counter + squats\n" +
+    "  \n" +
+    "  print(&quot;Current counter is&quot;, counter)\n" +
+    "print(&quot;Nice, you reached your weekly target of&quot;, target, &quot;squats.&quot;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
-    "max_wrong_lines": 10,
+    "max_wrong_lines": 0,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "show_feedback": true,
-    "trashId": "0-sortableTrash"
+    "show_feedback": true
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
