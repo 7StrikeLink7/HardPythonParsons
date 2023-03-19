@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Casting
+title: Casting - Float and Strings
 ---
-![image](https://user-images.githubusercontent.com/68385109/214691799-d95fcd8b-7c21-4677-97bf-4066100c6d63.png)
 
- <div id="0-sortableTrash" class="sortable-code"></div> 
+![image](https://user-images.githubusercontent.com/68385109/226183882-de8d18d9-e6a0-4722-8c5f-17fc2a6f5ea2.png)
+![image](https://user-images.githubusercontent.com/68385109/226183995-33c03a74-47cb-40b9-8cd0-b90fb88babbb.png)
+
+<div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
@@ -13,21 +15,22 @@ title: Casting
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "myVariable = &quot;5&quot;\n" +
-    "print(&quot;myVariable is a string: &quot; + myVariable)\n" +
-    "print(&quot;Concatenating by itself gives: &quot; + myVariable + myVariable)\n" +
-    "myVariable = int(myVariable)\n" +
-    "print(&quot;Now it is an integer by using int(). Adding by itself gives:&quot;, myVariable + myVariable)";
+  var initial = "myWallet = float(input(&quot;How much money do you have in your bank? &quot;))\n" +
+    "                       \n" +
+    "myWallet = myWallet * 1.5\n" +
+    "print(&quot;Congrats! Thanks to interest, you now have a whopping £ &quot; + str(myWallet))\n" +
+    "                       ";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "grader": ParsonsWidget._graders.VariableCheckGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "0-sortableTrash"
+    "trashId": "0-sortableTrash",
+    "vartests": []
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -41,7 +44,7 @@ title: Casting
   }); 
 })(); 
 </script>
- 
+
 ## Topics:
 [Outputs](./Outputs.html)
 [Variables and Outputs](./Variables.html)
