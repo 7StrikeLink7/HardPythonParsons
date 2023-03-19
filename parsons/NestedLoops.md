@@ -1,10 +1,13 @@
 ---
 layout: default
-title: Nested Loops 
+title: Nested Loops: Reversing strings
 ---
 
-![image](https://user-images.githubusercontent.com/68385109/216830678-a24b4c9e-c36c-47d3-bf99-ecdeaa4b4cc7.png)
-![image](https://user-images.githubusercontent.com/68385109/216830672-f31908b7-4961-444e-bb46-a46d292aef84.png)
+
+![image](https://user-images.githubusercontent.com/68385109/226176381-ce385f00-26d0-4e7f-8cc4-561104227159.png)
+
+
+
 
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
@@ -15,20 +18,36 @@ title: Nested Loops
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "for num1 in range(1, 11):\n" +
-    "  for num2 in range(1, 11):\n" +
-    "    print(num1 * num2, end=&#039; &#039;)\n" +
-    "  print()";
+  var initial = "run = &quot;True&quot;\n" +
+    "$$toggle::while::for::LOOP$$ (run != &quot;&quot;):\n" +
+    "  run = input(&quot;I can reverse any word you enter: &quot;)\n" +
+    "  reverseWord = &quot;&quot; \n" +
+    "  $$toggle::while::for::LOOP$$ i in range(len(run), 0, -1):\n" +
+    "   reverseWord += run[i-1]\n" +
+    "  print(reverseWord)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
-    "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "max_wrong_lines": 0,
+    "grader": ParsonsWidget._graders.VariableCheckGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "0-sortableTrash"
+    "vartests": [
+        {
+            "message": "Checking correct iteration keyword",
+            "initcode": "",
+            "code": "",
+            "variables": {}
+        },
+        {
+            "message": "Checking correct iteration keyword",
+            "initcode": "",
+            "code": "",
+            "variables": {}
+        }
+    ]
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -42,7 +61,6 @@ title: Nested Loops
   }); 
 })(); 
 </script>
-
 
 ![image](https://user-images.githubusercontent.com/68385109/216830541-e6e4b465-7eab-4705-8750-339fec0948bd.png)
 
