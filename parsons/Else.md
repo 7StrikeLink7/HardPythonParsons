@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Selection – IF Else statements - Test Score
-
+title: Selection – IF Else - Number guessing
 ---
 
-![image](https://user-images.githubusercontent.com/68385109/226179172-6a12eaf0-bebf-44f3-a481-286f0932626e.png)
-![image](https://user-images.githubusercontent.com/68385109/226179328-a28fc6b1-74d2-48e6-89c5-210cfe3f893c.png)
+![image](https://user-images.githubusercontent.com/68385109/226180488-384a6305-3b99-4796-8da8-aaf4a6922307.png)
+![image](https://user-images.githubusercontent.com/68385109/226180670-0df68b36-fcae-47b0-ad7b-be4f4588b9b6.png)
 
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
@@ -16,19 +15,13 @@ title: Selection – IF Else statements - Test Score
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "testScore = int(input(&quot;You just had a test. What did you score out of a hundred? &quot;))\n" +
-    "if (testScore == 0):\n" +
-    "  print(&quot;I am sure there is a good reason for this.&quot;)\n" +
-    "elif (testScore &lt; 0 or testScore &gt; 100):\n" +
-    "  print(&quot;That\&#039;s not right...&quot;)\n" +
-    "elif (testScore &lt; 50):\n" +
-    "  print(&quot;Well done. It was a hard test.&quot;)\n" +
-    "    \n" +
-    "elif (testScore &gt;= 50):\n" +
-    "  print(&quot;Congrats! You have done very well!&quot;)\n" +
-    "else: \n" +
-    "  print(&quot;Sorry. I wanted a number.&quot;)\n" +
-    "  \n" +
+  var initial = "import random\n" +
+    "luckyNumber = random.randint(1,10)\n" +
+    "guess = int(input(&quot;To win £10, you must guess what number I am thinking of: &quot;))\n" +
+    "if (guess == luckyNumber):\n" +
+    "  print(&quot;Well done! You guessed my number.&quot;)\n" +
+    "else:\n" +
+    "  print(&quot;Unlucky. Now you have to pay me £1! The number I was thinking of was&quot;, luckyNumber)\n" +
     "IF play = &quot;y&quot;: #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
@@ -52,6 +45,7 @@ title: Selection – IF Else statements - Test Score
   }); 
 })(); 
 </script>
+
  
 ## Topics:
 [Outputs](./Outputs.html)
