@@ -6,9 +6,6 @@ title: Nested Loops: Reversing strings
 
 ![image](https://user-images.githubusercontent.com/68385109/226176381-ce385f00-26d0-4e7f-8cc4-561104227159.png)
 
-
-
-
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -19,35 +16,21 @@ title: Nested Loops: Reversing strings
 <script type="text/javascript"> 
 (function(){
   var initial = "run = &quot;True&quot;\n" +
-    "$$toggle::while::for::LOOP$$ (run != &quot;&quot;):\n" +
+    "while (run != &quot;&quot;):\n" +
     "  run = input(&quot;I can reverse any word you enter: &quot;)\n" +
     "  reverseWord = &quot;&quot; \n" +
-    "  $$toggle::while::for::LOOP$$ i in range(len(run), 0, -1):\n" +
+    "  for i in range(len(run), 0, -1):\n" +
     "   reverseWord += run[i-1]\n" +
     "  print(reverseWord)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
-    "grader": ParsonsWidget._graders.VariableCheckGrader,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "show_feedback": true,
-    "vartests": [
-        {
-            "message": "Checking correct iteration keyword",
-            "initcode": "",
-            "code": "",
-            "variables": {}
-        },
-        {
-            "message": "Checking correct iteration keyword",
-            "initcode": "",
-            "code": "",
-            "variables": {}
-        }
-    ]
+    "show_feedback": true
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
