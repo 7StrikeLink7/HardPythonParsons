@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Inputs
+title: Inputs - creating a sentence
 ---
-![image](https://user-images.githubusercontent.com/68385109/213944552-0bd0947a-3b9b-4d7e-ac12-1819fe7eb678.png)
 
+![image](https://user-images.githubusercontent.com/68385109/226184480-be6552fe-3001-4150-b5ff-4c6cf598ccd8.png)
+![image](https://user-images.githubusercontent.com/68385109/226184580-7ffc74d6-3693-4c5f-9cd0-f5228627f625.png)
 <div id="0-sortableTrash" class="sortable-code"></div> 
 <div id="0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -13,10 +14,10 @@ title: Inputs
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "myName = input(&quot;Enter your name: &quot;)\n" +
-    "print(&quot;Welcome, Agent&quot;, myName +&quot;. The keys to the Ferrari are here for you.&quot;)\n" +
-    "myNumber = input(&quot;What agent number were you again? &quot;)\n" +
-    "print(&quot;Ah yes. Agent 00&quot;+ myNumber, myName + &quot;. Good luck with the mission.&quot;)";
+  var initial = "name = input(&quot;Enter a name: &quot;)\n" +
+    "adj = input(&quot;Enter an adjective: &quot;)\n" +
+    "noun = input(&quot;Enter a noun: &quot;)\n" +
+    "print(name + &quot; is one of the rarest &quot; + adj + &quot; &quot; + noun + &quot; in the world!&quot;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "0-sortable",
     "max_wrong_lines": 0,
@@ -40,6 +41,7 @@ title: Inputs
   }); 
 })(); 
 </script>
+
 ## Topics:
 [Outputs](./Outputs.html)
 [Variables and Outputs](./Variables.html)
